@@ -1,4 +1,4 @@
-package web.controller;
+package web.model;
 
 
 public class Car {
@@ -32,11 +32,10 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "name='" + name + '\'' +
-                ", series=" + series +
-                ", body='" + body + '\'' +
-                '}';
+        return "Автомобиль: " +
+                "наименование - " + name + "\n" +
+                " серия - " + series + "\n"+
+                " кузов - " + body + "."+"\n";
     }
 
     public Car(String name, int series, String body) {

@@ -1,14 +1,13 @@
 package web.service;
 
-import web.controller.Car;
+import web.model.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface CarService {
 
 
-    default List<Car> allCar(List<Car> cars) {
+    default List<Car> creatCarTable(List<Car> cars) {
         return cars;
     }
 }
