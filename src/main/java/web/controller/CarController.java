@@ -16,7 +16,7 @@ import java.util.List;
 public class CarController {
     private CarServiseImpl carServise;
     @Autowired
-    public void setOcean(CarServiseImpl carServise) {
+    public void setCarServise(CarServiseImpl carServise) {
         this.carServise = carServise;
     }
 
