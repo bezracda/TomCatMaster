@@ -32,10 +32,11 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Автомобиль: " +
-                "наименование - " + name + "\n" +
-                " серия - " + series + "\n"+
-                " кузов - " + body + "."+"\n";
+        return " Car{" +
+                "name='" + name + '\'' +
+                ", series=" + series +
+                ", body='" + body + '\'' +
+                '}'+ '\n';
     }
 
     public Car(String name, int series, String body) {

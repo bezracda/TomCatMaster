@@ -1,5 +1,6 @@
 package web.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import web.Dao.CarDao;
@@ -10,15 +11,16 @@ import java.util.stream.Collectors;
 @Component
 public class CarServiseImpl implements CarService {
 
-    CarDao carDao = new CarDao();
+    private CarDao carDao;
 
-    public List<Car> needCar(List<Car> cars, int i) {
-        return carDao.needCar(cars, i);
-
+    @Autowired
+    public void CarDaoSet(CarDao carDao) {
+        this.carDao = carDao;
     }
 
-    public List<Car> creatCarTable(List<Car> cars) {
-        return carDao.creatCarTable(cars);
+    public List<Car> needCar( int i) {
+        return carDao.needCar(i);
+
     }
 }
 
